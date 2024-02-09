@@ -1,0 +1,490 @@
+/*general*/
+* {
+    padding: 0;
+    margin: auto;
+}
+
+
+
+/*sections*/
+section {
+    height: 1000px;
+    float: left;
+}
+section.Left {
+    width: 63%;
+    background-color: #ecf5ff;
+}
+section.Right {
+    width: 37%;
+    background-color: #126dc2;
+}
+
+/*headers*/
+.header {
+    height: 100px;
+    background-color: #f6f7ff;
+    display: flex;
+}
+.header .logo {
+    width: 185px; height: 20px; top: 4%; left: 5%;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    background-color: #f6f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header i {
+    width: 5%;
+    margin-top: 3px; margin-left: 2px;
+    font-size: 32px;
+}
+
+.header .title {
+    top: 0; left: 0;
+}
+
+.header .title h2 {
+    margin: 0;padding: 0;
+    height: 30px;
+    font-size: 28px;
+}
+.header .title h4 {
+    font-size: 8px;
+}
+
+nav {
+    position: absolute;
+    left: 56%; top: 2%;
+    width: 40%; height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+nav a {
+    text-decoration: none;
+    color: #121212;
+}
+nav a:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* home */
+
+body {width: 100%;}
+
+.container {
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#TableMap {
+    width: 80%;
+    aspect-ratio: 16 / 10.5;
+    background-image: url("../image/Table\ Maps_1.png");
+    background-size: cover;
+    background-color: rgb(235, 235, 235);
+    font-size: 30px;
+    position: relative;
+    color: blue;
+}
+
+#rightSection {
+    margin-top: 15px;
+    width: 14%;
+    height: 800px;
+}
+
+#InfoBox {
+    height: 400px;
+    background-color: #f6f7ff;
+    border: #121212 1px solid;
+}
+
+#ShortcutBox {
+    margin-top: 15px;
+    height: 200px;
+    background-color: #f6f7ff;
+    border: #121212 1px solid;
+    position: relative;
+}
+
+/* Tables */
+
+    #TableMap button:hover {
+        cursor: pointer;
+        background-color: #706f6f;}
+
+
+    .type01 {
+        width: 6.1%;
+        height: 6.7%;
+        background-color: #c0c0c0;}
+    #Table71 {
+        position: absolute;
+        transform-origin: center;
+        top: 4.7%;left: 3.2%;}
+    #Table72 {
+        position: absolute;
+        transform-origin: center;
+        top: 4.7%;left: 13.3%;}
+    #Table73 {
+        position: absolute;
+        transform-origin: center;
+        top: 4.7%;left: 23.4%;}
+    #Table74 {
+        position: absolute;
+        transform-origin: center;
+        top: 4.7%;left: 33.5%;}
+
+    .type02 {
+        width: 4.6%;
+        height: 6.7%;
+        background-color: #c0c0c0;}
+    #Table75 {
+        position: absolute;
+        transform-origin: center;
+        top: 4.7%;left: 43.7%;}
+    #Table76 {
+        position: absolute;
+        transform-origin: center;
+        top: 15.5%;left: 4.6%;}
+    #Table77 {
+        position: absolute;
+        transform-origin: center;
+        top: 15.5%;left: 13.2%;}
+    #Table78 {
+        position: absolute;
+        transform-origin: center;
+        top: 15.5%;left: 21.9%;}
+    #Table79 {
+        position: absolute;
+        transform-origin: center;
+        top: 15.5%;left: 30.5%;}
+    #Table80 {
+        position: absolute;
+        transform-origin: center;
+        top: 15.5%;left: 39%;}
+
+    .type03 {
+        width: 3.9%;
+        height: 10.1%;
+        background-color: #c0c0c0;}
+    #Table81 {
+        position: absolute;
+        transform-origin: center;
+        top: 27.4%;left: 4.6%;}
+    #Table82 {
+        position: absolute;
+        transform-origin: center;
+        top: 27.4%;left: 11.7%;}
+    #Table83 {
+        position: absolute;
+        transform-origin: center;
+        top: 27.4%;left: 18.7%;}
+    #Table84 {
+        position: absolute;
+        transform-origin: center;
+        top: 27.4%;left: 25.7%;}
+    #Table85 {
+        position: absolute;
+        transform-origin: center;
+        top: 27.4%;left: 32.7%;}
+
+    .type04 {
+        width: 7%;
+        height: 10.6%;
+        border-radius: 50%;
+        background-color: #c0c0c0;}
+    #Table21 {
+        position: absolute;
+        transform-origin: center;
+        top: 10.7%;left: 74.2%;}
+    #Table22 {
+        position: absolute;
+        transform-origin: center;
+        top: 3.6%;left: 63.25%;}
+    #Table23 {
+        position: absolute;
+        transform-origin: center;
+        top: 10.7%;left: 52.3%;}
+    #Table24 {
+        position: absolute;
+        transform-origin: center;
+        top: 20.1%;left: 63.25%;}
+
+    .type05 {
+        width: 4%;
+        height: 4.4%;
+        background-color: #c0c0c0;}
+    #Table1 {
+        position: absolute;
+        transform-origin: center;
+        top: 36.9%;left: 79.5%;}
+    #Table2 {
+        position: absolute;
+        transform-origin: center;
+        top: 41.7%;left: 79.5%;}
+    #Table3 {
+        position: absolute;
+        transform-origin: center;
+        top: 46.45%;left: 79.5%;}
+    #Table4 {
+        position: absolute;
+        transform-origin: center;
+        top: 51.2%;left: 79.5%;}
+    #Table5 {
+        position: absolute;
+        transform-origin: center;
+        top: 55.9%;left: 79.5%;}
+    #Table6 {
+        position: absolute;
+        transform-origin: center;
+        top: 60.7%;left: 79.5%;}
+    #Table7 {
+        position: absolute;
+        transform-origin: center;
+        top: 65.5%;left: 79.5%;}
+
+    .type06 {
+        width: 4.6%;
+        height: 6.9%;
+        border-radius: 50%;
+        background-color: #c0c0c0;}
+    #Table8 {
+        position: absolute;
+        transform-origin: center;
+        top: 55.9%;left: 71.9%;}
+    #Table9 {
+        position: absolute;
+        transform-origin: center;
+        top: 67.8%;left: 71.9%;}
+    #Table10 {
+        position: absolute;
+        transform-origin: center;
+        top: 79.7%;left: 71.9%;}
+    #Table11 {
+        position: absolute;
+        transform-origin: center;
+        top: 91.6%;left: 71.9%;}
+
+    .type07 {
+        width: 3.9%;
+        height: 39.1%;
+        background-color: #c0c0c0;}
+    #Table12 {
+        position: absolute;
+        transform-origin: center;
+        top: 51%;left: 65.5%;}
+    #Table13 {
+        position: absolute;
+        transform-origin: center;
+        top: 51%;left: 60.9%;}
+
+    .type08 {
+        width: 5.3%;
+        height: 7.9%;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        background-color: #c0c0c0;}
+    #Table51 {
+        position: absolute;
+        transform-origin: center;
+        top: 52.4%;left: 52.3%;}
+    #Table52 {
+        position: absolute;
+        transform-origin: center;
+        top: 61.9%;left: 52.3%;}
+    #Table53 {
+        position: absolute;
+        transform-origin: center;
+        top: 71.5%;left: 52.3%;}
+    #Table54 {
+        position: absolute;
+        transform-origin: center;
+        top: 81%;left: 52.3%;}
+    #Table55 {
+        position: absolute;
+        transform-origin: center;
+        top: 90.5%;left: 52.3%;}
+    #Table56 {
+        position: absolute;
+        transform-origin: center;
+        top: 52.4%;left: 45.28%;}
+    #Table57 {
+        position: absolute;
+        transform-origin: center;
+        top: 61.9%;left: 45.28%;}
+    #Table58 {
+        position: absolute;
+        transform-origin: center;
+        top: 71.5%;left: 45.28%;}
+    #Table59 {
+        position: absolute;
+        transform-origin: center;
+        top: 81%;left: 45.28%;}
+    #Table60 {
+        position: absolute;
+        transform-origin: center;
+        top: 90.5%;left: 45.28%;}
+    #Table61 {
+        position: absolute;
+        transform-origin: center;
+        top: 52.4%;left: 38.23%;}
+    #Table62 {
+        position: absolute;
+        transform-origin: center;
+        top: 61.9%;left: 38.23%;}
+    #Table63 {
+        position: absolute;
+        transform-origin: center;
+        top: 71.5%;left: 38.23%;}
+    #Table64 {
+        position: absolute;
+        transform-origin: center;
+        top: 81%;left: 38.23%;}
+    #Table65 {
+        position: absolute;
+        transform-origin: center;
+        top: 90.5%;left: 38.23%;}
+
+    .type09 {
+        width: 4.9%;
+        height: 16.7%;
+        background-color: #c0c0c0;}
+    #Table31 {
+        position: absolute;
+        transform-origin: center;
+        top: 52.1%;left: 3%;}
+    #Table32 {
+        position: absolute;
+        transform-origin: center;
+        top: 52.1%;left: 10%;}
+    #Table33 {
+        position: absolute;
+        transform-origin: center;
+        top: 52.1%;left: 17%;}
+    #Table34 {
+        width: 4.3%;
+        height: 16.1%;
+        position: absolute;
+        transform-origin: center;
+        top: 73.6%;left: 3%;}
+    #Table35 {
+        position: absolute;
+        transform-origin: center;
+        top: 73.6%;left: 10%;}
+    #Table36 {
+        position: absolute;
+        transform-origin: center;
+        top: 73.6%;left: 17%;}
+
+    .type10 {
+        width: 4.7%;
+        height: 6.9%;
+        background-color: #c0c0c0;}
+    #Table37 {
+        position: absolute;
+        transform-origin: center;
+        top: 92.8%;left: 3%;}
+    #Table38 {
+        position: absolute;
+        transform-origin: center;
+        top: 92.8%;left: 10%;}
+    #Table39 {
+        position: absolute;
+        transform-origin: center;
+        top: 92.8%;left: 17%;}
+    #Table40 {
+        position: absolute;
+        transform-origin: center;
+        top: 92.8%;left: 24.1%;}
+    #Table41 {
+        position: absolute;
+        transform-origin: center;
+        top: 83.2%;left: 24.1%;}
+    #Table42 {
+        position: absolute;
+        transform-origin: center;
+        top: 73.6%;left: 24.1%;}
+
+
+    .status-Ready { background-color: #c0c0c0; }
+    #TableMap .status-Ready:hover { cursor: pointer; background-color: #555555; }
+    .status-Seated { background-color: rgb(255, 82, 82); }
+    #TableMap .status-Seated:hover { cursor: pointer; background-color: rgb(220, 37, 37); }
+    .status-Ordered { background-color: rgb(65, 164, 240); }
+    #TableMap .status-Ordered:hover { cursor: pointer; background-color: rgb(0, 112, 198); }
+    .status-Served { background-color: rgb(59, 175, 38); }
+    #TableMap .status-Served:hover { cursor: pointer; background-color: rgb(34, 120, 19); }
+    .status-BillPrinted { background-color: rgb(192, 94, 241); }
+    #TableMap .status-BillPrinted:hover { cursor: pointer; background-color: rgb(137, 2, 204); }
+    .status-ToClean { background-color: rgb(233, 212, 70); }
+    #TableMap .status-ToClean:hover { cursor: pointer; background-color: rgb(228, 175, 0); }
+    .status-Reserved { background-color: rgb(109, 109, 24); }
+    #TableMap .status-Reserved:hover { cursor: pointer; background-color: rgb(73, 73, 0); }
+
+/* InfoBox */
+
+#InfoTable {
+    position: relative;
+}
+
+#TableId {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#Info {
+    margin-left: 10%;
+}
+
+
+/* Shortcuts */
+
+.Shortcuts {
+    width: 35%; height: 35%;
+    background-color: #fff;
+    border: #121212 1px solid;
+}
+
+#ReadyShortcut {
+    position: absolute;
+    left: 10%; top: 10%;
+}
+#ServedShortcut {
+    position: absolute;
+    left: 55%; top: 10%;
+}
+#ToCleanShortcut {
+    position: absolute;
+    left: 10%; top: 55%;
+}
+#ReservedShortcut {
+    position: absolute;
+    left: 55%; top: 55%;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #383b50;
+    display: flex;
+}

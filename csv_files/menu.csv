@@ -1,0 +1,18 @@
+﻿menu_id,menu_name,menu_type,price,production_cost
+1,Sushi Bento,japanese,5.99,5
+2,California Sushi Roll,japanese,3.99,3
+3,Ramen,japanese,10.99,3
+4,Burrito,mexican,9.99,3
+5,Taco,mexican,2.99,2
+6,Quesadilla,mexican,4.25,2
+7,Detroit Pizza,pizza,16.89,8
+8,Chicago Pizza,pizza,17.99,8
+9,Hawaiian Pizza,pizza,17.99,8
+10,Tomato Pasta,pasta,13.99,2.5
+11,Carbonara Pasta,pasta,13.99,2.5
+12,Rose Pasta,pasta,13.99,2.7
+13,Steak,,24.99,18
+14,Salad,,11.25,3
+15,Donut,,0.99,0.7
+16,Drink,,1.75,1.7
+,,,,

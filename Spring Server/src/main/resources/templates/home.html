@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ratatouille</title>
+        <link rel="stylesheet" th:href="@{/css/MainStyle.css}">
+        <script src="https://kit.fontawesome.com/6e285928c2.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <div th:insert="view/header :: Header"></div>
+        <div class="container">
+            <div id="TableMap">
+                <span class="Outdoor">
+                    <button class="type01" id="Table71">71</button>
+                    <button class="type01" id="Table72">72</button>
+                    <button class="type01" id="Table73">73</button>
+                    <button class="type01" id="Table74">74</button>
+                    <button class="type02" id="Table75">75</button>
+                    <button class="type02" id="Table76">76</button>
+                    <button class="type02" id="Table77">77</button>
+                    <button class="type02" id="Table78">78</button>
+                    <button class="type02" id="Table79">79</button>
+                    <button class="type02" id="Table80">80</button>
+                    <button class="type03" id="Table81">81</button>
+                    <button class="type03" id="Table82">82</button>
+                    <button class="type03" id="Table83">83</button>
+                    <button class="type03" id="Table84">84</button>
+                    <button class="type03" id="Table85">85</button>
+                </span>
+                <span class="Lounge">
+                    <button class="type04" id="Table21">21</button>
+                    <button class="type04" id="Table22">22</button>
+                    <button class="type04" id="Table23">23</button>
+                    <button class="type04" id="Table24">24</button>
+                    <button class="type05" id="Table1">1</button>
+                    <button class="type05" id="Table2">2</button>
+                    <button class="type05" id="Table3">3</button>
+                    <button class="type05" id="Table4">4</button>
+                    <button class="type05" id="Table5">5</button>
+                    <button class="type05" id="Table6">6</button>
+                    <button class="type05" id="Table7">7</button>
+                    <button class="type06" id="Table8">8</button>
+                    <button class="type06" id="Table9">9</button>
+                    <button class="type06" id="Table10">10</button>
+                    <button class="type06" id="Table11">11</button>
+                    <button class="type07" id="Table12">12</button>
+                    <button class="type07" id="Table13">13</button>
+                    <button class="type08" id="Table51">51</button>
+                    <button class="type08" id="Table52">52</button>
+                    <button class="type08" id="Table53">53</button>
+                    <button class="type08" id="Table54">54</button>
+                    <button class="type08" id="Table55">55</button>
+                    <button class="type08" id="Table56">56</button>
+                    <button class="type08" id="Table57">57</button>
+                    <button class="type08" id="Table58">58</button>
+                    <button class="type08" id="Table59">59</button>
+                    <button class="type08" id="Table60">60</button>
+                    <button class="type08" id="Table61">61</button>
+                    <button class="type08" id="Table62">62</button>
+                    <button class="type08" id="Table63">63</button>
+                    <button class="type08" id="Table64">64</button>
+                    <button class="type08" id="Table65">65</button>   
+                </span>
+                <span class="Reception">
+                    <button class="type09" id="Table31">31</button>   
+                    <button class="type09" id="Table32">32</button>   
+                    <button class="type09" id="Table33">33</button>   
+                    <button class="type09" id="Table34">34</button>   
+                    <button class="type09" id="Table35">35</button>   
+                    <button class="type09" id="Table36">36</button>   
+                    <button class="type10" id="Table37">37</button>
+                    <button class="type10" id="Table38">38</button>
+                    <button class="type10" id="Table39">39</button>
+                    <button class="type10" id="Table40">40</button>
+                    <button class="type10" id="Table41">41</button>
+                    <button class="type10" id="Table42">42</button>
+                </span>
+            </div>
+            <div id="rightSection">
+                <div id="InfoBox"></div>
+                <div id="ShortcutBox">
+                    <button class="Shortcuts" id="ReadyShortcut">Ready</button>
+                    <button class="Shortcuts" id="ServedShortcut">Served</button>
+                    <button class="Shortcuts" id="ToCleanShortcut">To Clean</button>
+                    <button class="Shortcuts" id="ReservedShortcut">Reserved</button>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <footer></footer>
+    <script>
+        // Sample data structure for tables
+        var tablesData = {
+            "Table1": { id: "Table1", status: "Ready", number: 0, menuList: ["Pasta", "Salad"], totalPrice: 20 },
+            "Table2": { id: "Table2", status: "Ready", number: 0, menuList: ["Soup"], totalPrice: 10 },
+            "Table3": { id: "Table3", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table4": { id: "Table4", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table5": { id: "Table5", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table6": { id: "Table6", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table7": { id: "Table7", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table8": { id: "Table8", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table9": { id: "Table9", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table10": { id: "Table10", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table11": { id: "Table11", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table12": { id: "Table12", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table13": { id: "Table13", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table21": { id: "Table21", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table22": { id: "Table22", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table23": { id: "Table23", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table24": { id: "Table24", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table31": { id: "Table31", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table32": { id: "Table32", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table33": { id: "Table33", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table34": { id: "Table34", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table35": { id: "Table35", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table36": { id: "Table36", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table37": { id: "Table37", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table38": { id: "Table38", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table39": { id: "Table39", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table40": { id: "Table40", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table41": { id: "Table41", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table42": { id: "Table42", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table51": { id: "Table51", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table52": { id: "Table52", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table53": { id: "Table53", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table54": { id: "Table54", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table55": { id: "Table55", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table56": { id: "Table56", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table57": { id: "Table57", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table58": { id: "Table58", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table59": { id: "Table59", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table60": { id: "Table60", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table61": { id: "Table61", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table62": { id: "Table62", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table63": { id: "Table63", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table64": { id: "Table64", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table65": { id: "Table65", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table71": { id: "Table71", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table72": { id: "Table72", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table73": { id: "Table73", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table74": { id: "Table74", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table75": { id: "Table75", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table76": { id: "Table76", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table77": { id: "Table77", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table78": { id: "Table78", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table79": { id: "Table79", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table80": { id: "Table80", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table81": { id: "Table81", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table82": { id: "Table82", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table83": { id: "Table83", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table84": { id: "Table84", status: "Ready", number: 0, menuList: [], totalPrice: 0 },
+            "Table85": { id: "Table85", status: "Ready", number: 0, menuList: [], totalPrice: 0 }
+        };
+        
+        var statuses = ["Ready", "Seated", "Ordered", "Served", "Bill Printed", "To Clean", "Reserved"];
+        
+        function updateInfoBox(tableId) {
+            var table = tablesData[tableId];
+
+            if (!table) {
+                document.getElementById('InfoBox').innerHTML = "No data available for this table.";
+                return;
+            }
+
+            var statusHtml = statuses.map(status => `
+                <label>
+                    <input type="radio" name="status" value="${status}" ${table.status === status ? "checked" : ""}/>
+                    ${status}
+                </label>
+            `).join("<br>");
+
+            var infoHtml = `
+                <div id="InfoTable">
+                    <div id="TableId">${table.id}</div>
+                    <div id="Info">
+                        <p>Status:</p>
+                        <div>${statusHtml}</div>
+                        <p>Number of People:</p>
+                        <input type="number" id="numberInput" value="${table.number}" />
+                        <p>Ordered Menu:</p>
+                        <input type="text" id="menuInput" value="${table.menuList.join(", ")}" />
+                        <p>Total Price:</p>
+                        $<input type="number" id="totalPriceInput" value="${table.totalPrice}" />
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('InfoBox').innerHTML = infoHtml;
+
+            // Add event listeners for the new inputs
+            document.getElementById('numberInput').addEventListener('change', function() {
+                updateTableNumber(tableId, this.value);
+            });
+
+            document.getElementById('totalPriceInput').addEventListener('change', function() {
+                updateTableTotalPrice(tableId, this.value);
+            });
+
+            document.getElementById('menuInput').addEventListener('change', function() {
+                updateTableMenu(tableId, this.value);
+            });
+
+            document.querySelectorAll('#InfoBox input[type="radio"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    updateTableStatus(tableId, this.value);
+                });
+            });
+        }
+        function updateTableStatus(tableId, status) {
+            tablesData[tableId].status = status;
+            // Update the status in the database or server if necessary
+            updateButtonColor(tableId, status);
+        }
+
+        function updateButtonColor(tableId, status) {
+            var button = document.getElementById(tableId);
+            if (!button) return;
+
+            // Remove all status classes
+            button.classList.remove(...statuses.map(s => "status-" + s.replace(/\s+/g, '')));
+
+            // Add new status class
+            button.classList.add("status-" + status.replace(/\s+/g, ''));
+        }
+        
+        function updateTableNumber(tableId, number) {
+            tablesData[tableId].number = number;
+            // Update the number in the database or server if necessary
+        }
+        
+        function updateTableTotalPrice(tableId, totalPrice) {
+            tablesData[tableId].totalPrice = totalPrice;
+            // Update the total price in the database or server if necessary
+        }
+
+        function updateTableMenu(tableId, menu) {
+            tablesData[tableId].menuList = menu.split(",").map(item => item.trim());
+            // Update the menu list in the database or server if necessary
+        }
+        
+        // Add click event listeners to all table buttons
+        document.querySelectorAll('#TableMap button').forEach(button => {
+            button.addEventListener('click', function() {
+                updateInfoBox(this.id);
+            });
+        });
+        </script>
+</html>
