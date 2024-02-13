@@ -37,6 +37,7 @@ def generate_name():
           presence_penalty=0.0
         )
         name = response.choices[0].text.strip()
+
         return name
     except openai.error.InvalidRequestError as e:
         print(f"Failed to generate name: {e}")
@@ -73,6 +74,7 @@ def generate_name_from_list():
 
 
 def generate_random_date_in_2017():
+    
     start_date = datetime.date(2017, 1, 1)
     end_date = datetime.date(2017, 12, 31)
     random_number_of_days = random.randrange((end_date - start_date).days)
